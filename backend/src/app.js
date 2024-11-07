@@ -42,6 +42,11 @@ app.delete('/movies/:title', (req, res) => {
 
 });
 
+app.patch('/movies/:title', (req, res) => {
+
+});
+
+
 app.listen(8081, () => {
     console.log('El backend ha iniciado en el puerto 8081');
 });
