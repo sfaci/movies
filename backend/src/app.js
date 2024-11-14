@@ -34,14 +34,14 @@ app.post('/movies', async (req, res) => {
     res.status(201).json({});
 });
 
-app.put('/movies/:title', async (req, res) => {
+app.put('/movies/:movieId', async (req, res) => {
     await db('movies').update({
         title: req.body.title,
         description: req.body.description,
         year: req.body.year
-    }).where({title: req.params.title});
+    }).where({id: req.params.movieId});
 
-    res.status(200).json({});
+    res.status(204).json({});
 });
 
 app.delete('/movies/:title', (req, res) => {
