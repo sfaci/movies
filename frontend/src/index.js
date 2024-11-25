@@ -14,7 +14,7 @@ window.readMovies = function() {
                 row.innerHTML = td(movie.title) +
                                 td(movie.description) +
                                 td(movie.year) +
-                                '<a class="btn btn-warning" href="modify.html">' +
+                                '<a class="btn btn-warning" href="modify.html?id=' + movie.id + '">' +
                                 icon('edit') + 
                                 '</a> ' +
                                 '<a class="btn btn-danger" href="javascript:removeMovie(' + movie.id + ')">' +
